@@ -107,7 +107,8 @@ def main():
         raise SystemExit
 
     if channel is None or \
-            (PYTHON_CAN and (bitrate is None or interface is None)):
+            bitrate is None or \
+            (PYTHON_CAN and interface is None):
         usage()
         print("\nPlease provide all required arguments.\n",
               file=sys.stderr)
